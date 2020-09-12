@@ -19,7 +19,7 @@ var chartGroup = svg.append("g")
                     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // import data from csv
-d3.csv("assets/data/data.csv", d3.autoType).then(function(response){
+d3.csv("assets/data/data.csv").then(function(response){
     console.log(response);
 
     // parse data
@@ -52,7 +52,7 @@ d3.csv("assets/data/data.csv", d3.autoType).then(function(response){
         .call(yAxis);
 
     // create circles
-    var circleGroup = chartGroup.selectAll("circle")
+    var circleGroup = chartGroup.append("g").selectAll("circle")
         .data(response)
         .enter()
         .append("circle")
@@ -64,7 +64,7 @@ d3.csv("assets/data/data.csv", d3.autoType).then(function(response){
         .attr("opacity", 0.9);
 
     // state abbreviations in the circles
-    var textGroup = chartGroup.selectAll("text")
+    var textGroup = chartGroup.append("g").selectAll("text")
         .data(response)
         .enter()
         .append("text")
@@ -94,4 +94,6 @@ d3.csv("assets/data/data.csv", d3.autoType).then(function(response){
         .style("font-weight", "bold")
         .text("In Poverty (%)");
 
+    }).catch(function (error) {
+        console.log(error);
 });
