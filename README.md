@@ -11,8 +11,12 @@ Made use of **Javascript** for this assignment and respresentation of the data t
 
 ![4-scatter](Images/4-scatter.jpg)
 
-* I created a scatter plot between two of the data variables `Healthcare vs. Poverty` from the `data.csv` given.
+## Data-Visualization created
+* I created a scatter plot between two of the data variables `Lack in Healthcare (%) vs. Poverty (%)` from the `data.csv` given.
 * The scatter plot that represents each state with its abbreviations in the circle.
 * Created axes and labels to the left and bottom of the chart.
+
+## Insight
+* The scattered plot displayes co-relation between Healthcare and Poverty, with few states that lack healthcare display higher poverty and states with better healthcare has lower poverty level. 
 
 * Note: I had used live server extension in Visual Studio Code to host the page in web browser.
